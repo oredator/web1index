@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Franja amarilla en la parte superior -->
+    <div class="header">
+        <h1>Mi Título</h1>
+    </div>
+    
+    <!-- Primera sección con fondo negro -->
+    <div class="section section-1">
+        <p class="text-white">Este es el primer texto en blanco, con unas 15 palabras de ejemplo.</p>
+        <p class="text-yellow">Este es el texto debajo con letras de color amarillo.</p>
+
+        <!-- Video de la sección 1 con reproducción automática -->
+        <!-- Video de la sección 1 con reproducción automática -->
+        <!-- Video de la sección 1 con reproducción automática -->
+        <div class="video-container" onclick="togglePlayPause()"> <!-- Este evento alternará el estado del video -->
+            <video id="video" autoplay loop muted class="video-player" controls>
+                <source src="video1.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+            <!-- Imagen de activar sonido -->
+            <div id="soundButton" class="sound-button" onclick="toggleSound()">
+                <img src="sonido.png" alt="Activar sonido" class="sound-icon">
+            </div>
+
+            
+        </div>
+        <!-- Texto sin redireccionamiento -->
+        <div class="call-to-action">
+            <p class="cta-text">Si te gustaría que te enseñe todo lo que sé de trading y que sea tu mentor, dale click aquí abajo</p>
+        </div>
+
+        <!-- Contenedor amarillo con enlace -->
+        <div class="academy-container">
+            <a href="https://academiaindex.com" target="_blank">
+                <div class="academy-button">
+                    Quiero unirme a la academia de INDEX
+                </div>
+            </a>
+        </div>
+        <!-- Línea divisoria -->
+        <hr class="divider">
+
+        <!-- Título de la sección -->
+        <h2 class="section-title">Resultados de INDEX</h2>
+
+        <!-- Resultados en filas -->
+        <div class="results">
+            <!-- Fila 1 -->
+            <div class="result-row">
+                <div class="result-column">
+                    <div class="result-img">
+                        <img src="imagen2.png" alt="Fondeado con 300k">
+                    </div>
+                </div>
+                <div class="result-column">
+                    <div class="result-text">
+                        <p>Fondeado con 300k</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Fila 2 -->
+            <div class="result-row reverse">
+                <div class="result-column">
+                    <div class="result-text">
+                        <p>Personalizados fondeados con 100k</p>
+                    </div>
+                </div>
+                <div class="result-column">
+                    <div class="result-img">
+                        <img src="imagen2.png" alt="Personalizados fondeados con 100k">
+                    </div>
+                </div>
+            </div>
+            <!-- Fila 3 -->
+            <div class="result-row">
+                <div class="result-column">
+                    <div class="result-img">
+                        <img src="imagen2.png" alt="Fondeado con 300k">
+                    </div>
+                </div>
+                <div class="result-column">
+                    <div class="result-text">
+                        <p>Fondeado con 300k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nueva sección con fondo blanco -->
+    <div class="section-white">
+        <h2 class="section-title-black">Esto es para ti si...</h2>
+        <div class="yellow-box">
+            <p>Frase 1: papi serna.</p>
+            <p>Frase 2: papi serna.</p>
+            <p>Frase 3: papi serna.</p>
+            <p>Frase 4: papi serna.</p>
+            <p>Frase 5: papi serna.</p>
+            <p>Frase 6: papi serna.</p>
+        </div>
+        <p class="stories-text">Estas son algunas de las historias dentro de la academia de INDEX</p>
+
+    <!-- Contenedor de 3 columnas -->
+    <div class="columns-container">
+        <!-- Columna 1 -->
+        <div class="column">
+            <div class="row">
+                <video class="video" controls poster="miniatura1.jpg">
+                    <source src="video1.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div class="row">
+                <p class="story-text large">Este hombre de 27 años ganó 50 mil dólares en solo 3 meses</p>
+            </div>
+            <div class="row">
+                <p class="story-text small">En los últimos 6 meses he retirado 50 mil dólares con lo que aprendí en INDEX.</p>
+            </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="column">
+            <div class="row">
+                <video class="video" controls poster="miniatura1.jpg">
+                    <source src="video1.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div class="row">
+                <p class="story-text large">Este hombre de 27 años ganó 50 mil dólares en solo 3 meses</p>
+            </div>
+            <div class="row">
+                <p class="story-text small">En los últimos 6 meses he retirado 50 mil dólares con lo que aprendí en INDEX.</p>
+            </div>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="column">
+            <div class="row">
+                <video class="video" controls poster="miniatura1.jpg">
+                    <source src="video1.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div class="row">
+                <p class="story-text large">Este hombre de 27 años ganó 50 mil dólares en solo 3 meses</p>
+            </div>
+            <div class="row">
+                <p class="story-text small">En los últimos 6 meses he retirado 50 mil dólares con lo que aprendí en INDEX.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Contenedor amarillo con enlace -->
+    <div class="academy-container">
+        <a href="https://academiaindex.com" target="_blank">
+            <div class="academy-button">
+                Quiero unirme a la academia de INDEX
+            </div>
+        </a>
+    </div>
+    </div>
+    <!-- Nueva sección con fondo negro -->
+    <div class="section-results">
+        <h2>
+            <span class="text-white">Estos son los resultados diarios de los miembros de la</span><br>
+            <span class="text-yellow">Academia de Index</span>
+        </h2>
+
+        <!-- Contenedor adicional para centrar las imágenes -->
+        <div class="image-wrapper">
+            <div class="image-container">
+                <img src="imagen3.jpg" alt="Foto 1">
+                <img src="imagen3.jpg" alt="Foto 2">
+                <img src="imagen3.jpg" alt="Foto 3">
+            </div>
+        </div>
+    </div>
+    <!-- Nueva sección con fondo blanco -->
+    <div class="section-white-bg">
+        <h2 class="section-title-large">¿Qué pasa cuando te unes a Index?</h2>
+        <div class="image-container-small">
+            <img src="imagen3.jpg" alt="Imagen de Index">
+        </div>
+    </div>
+    <div class="academy-container">
+        <a href="https://academiaindex.com" target="_blank">
+            <div class="academy-button">
+                Quiero unirme a la academia de INDEX
+            </div>
+        </a>
+    </div>
+    <p></p>
+    <!-- Nueva sección con fondo negro -->
+    <div class="section-black-bg">
+        <h2>
+            <span class="text-white">¿Qué hay dentro de la</span><br>
+            <span class="text-yellow">Academia de Index</span>
+        </h2>
+
+        <!-- Contenedor con borde amarillo -->
+        <!-- Primer contenedor (imagen a la izquierda, texto a la derecha) -->
+        <div class="content-container">
+            <div class="content-left">
+                <img src="imagen1.png" alt="Imagen 1" class="image-left">
+            </div>
+            <div class="content-right">
+                <h3 class="right-title">Título 1</h3>
+                <p class="right-text">Texto descriptivo 1.</p>
+            </div>
+        </div>
+
+        <!-- Segundo contenedor (imagen a la derecha, texto a la izquierda) -->
+        <div class="content-container reverse">
+            <div class="content-left">
+                <img src="imagen1.png" alt="Imagen 2" class="image-left">
+            </div>
+            <div class="content-right">
+                <h3 class="right-title">Título 2</h3>
+                <p class="right-text">Texto descriptivo 2.</p>
+            </div>
+        </div>
+
+        <!-- Tercer contenedor (imagen a la izquierda, texto a la derecha) -->
+        <div class="content-container">
+            <div class="content-left">
+                <img src="imagen1.png" alt="Imagen 3" class="image-left">
+            </div>
+            <div class="content-right">
+                <h3 class="right-title">Título 3</h3>
+                <p class="right-text">Texto descriptivo 3.</p>
+            </div>
+        </div>
+
+        <!-- Cuarto contenedor (imagen a la derecha, texto a la izquierda) -->
+        <div class="content-container reverse">
+            <div class="content-left">
+                <img src="imagen1.png" alt="Imagen 4" class="image-left">
+            </div>
+            <div class="content-right">
+                <h3 class="right-title">Título 4</h3>
+                <p class="right-text">Texto descriptivo 4.</p>
+            </div>
+        </div>
+        <div class="academy-container">
+            <a href="https://academiaindex.com" target="_blank">
+                <div class="academy-button">
+                    Quiero unirme a la academia de INDEX
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+       // Función para activar/desactivar el sonido
+        // Función para activar/desactivar el sonido
+        // Función para activar/desactivar el sonido
+        function toggleSound() {
+            const video = document.getElementById('video');
+            const soundButton = document.getElementById('soundButton');
+            
+            // Si el video está en silencio, desactivar el silencio y ocultar la imagen
+            if (video.muted) {
+                video.muted = false;
+                soundButton.classList.add('hidden'); // Ocultar la imagen cuando el sonido está activado
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>
