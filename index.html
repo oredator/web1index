@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo Gradiente con Botón</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #76839c, #16212e);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo del botón circular */
+        /* Estilo del botón circular */
+        /* Estilo del botón de menú (nuevo estilo) */
+        .menu {
+            position: fixed; /* Fijo en la esquina */
+            top: 20px; /* Ajusta esta propiedad para que esté a 20px del borde superior */
+            right: 20px; /* Ajusta esta propiedad para que esté a 20px del borde derecho */
+            width: 60px; /* Tamaño cuadrado */
+            height: 60px; /* Tamaño cuadrado */
+            background-color: #656d77; /* Color de fondo del botón */
+            border-radius: 100px; /* Bordes redondeados */
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px; /* Tamaño del icono dentro del botón */
+            color: #fafafa;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* Efecto al pasar el ratón por encima del botón de menú */
+        .menu:hover {
+            background-color: #76839c; /* Color al pasar el ratón */
+            transform: scale(1.1); /* Efecto de aumentar el tamaño */
+        }
+
+
+
+        /* Efecto al pasar el ratón por encima del botón */
+        .button:hover {
+            background-color: #76839c;
+            transform: scale(1.1);
+        }
+
+
+
+        /* Estilo de la imagen circular */
+        .image {
+            width: 150px; /* Ajusta el tamaño de la imagen */
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover; /* Asegura que la imagen no se deforme */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+        }
+/* Estilo para la imagen circular */
+.image-container {
+    position: absolute;
+    top: 80px; /* Ajusta esta propiedad para que la imagen esté justo debajo del botón */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilo para el título y la descripción */
+.content {
+    text-align: center;
+    margin-top: 250px; /* Asegúrate de que haya suficiente espacio debajo de la imagen circular */
+}
+
+h1 {
+    font-size: 36px; /* Tamaño grande para el título */
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px; /* Tamaño más pequeño para la descripción */
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* Estilo para las imágenes pequeñas */
+.images-container {
+    display: flex;
+    justify-content: center; /* Alinea las imágenes horizontalmente */
+    margin-top: 30px;
+}
+
+.small-image {
+    width: 50px; /* Tamaño pequeño de las imágenes */
+    height: 50px;
+    margin: 0 10px; /* Espaciado entre imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    transition: transform 0.3s ease; /* Suaviza la animación al hacer hover */
+}
+
+/* Efecto cuando el ratón pasa sobre las imágenes */
+.small-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+
+
+
+/*Botones*/
+/* Contenedor de botones */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Asegura espacio debajo de las imágenes */
+}
+
+/* Estilo para los botones */
+/* Contenedor de botones */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Ajusta este valor si es necesario para el espacio */
+}
+
+/* Estilo para los botones */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+    border-radius: 30px; /* Esquinas redondeadas */
+    border: 1px solid #fff; /* Borde blanco */
+    margin: 10px 0; /* Espaciado entre los botones */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+/* Efecto de hover en los botones */
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo más oscuro en hover */
+    transform: scale(1.05); /* Agranda el botón */
+}
+
+/* Estilo para el logo dentro del botón */
+.button-logo {
+    width: 30px; /* Tamaño del logo */
+    height: 30px;
+    margin-left: 10px; /* Espacio entre el logo y el texto */
+    border-radius: 50%;
+}
+
+/* Estilo para el texto dentro del botón */
+.button-text {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 15px; /* Espacio entre el logo y el texto */
+    font-weight: bold;
+}
+
+
+/* Diseño responsive */
+@media screen and (max-width: 768px) {
+    /* Hacer los botones más grandes en pantallas móviles */
+    .button {
+        width: 200px;
+        height: 45px;
+    }
+
+    .button-text {
+        font-size: 14px;
+    }
+
+    /* Asegura que el logo tenga un tamaño adecuado en móviles */
+    .button-logo {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+        /* Diseño responsive */
+        @media screen and (max-width: 768px) {
+            body {
+                background-size: cover;  /* Ajusta el fondo a la pantalla en móviles */
+            }
+
+            .button {
+                top: 15px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="menu" onclick="window.location.href='web.html';">...</button>
+    <div class="image-container">
+        <img src="logo.jpg" alt="Imagen Circular" class="image">
+    </div>
+        <!-- Título principal y descripción -->
+        <div class="content">
+            <h1>Index</h1>
+            <p class="description">Comunidad de traders de Índices bursátiles.</p>
+        </div>
+    
+        <!-- Imágenes pequeñas -->
+        <!-- Imágenes pequeñas como botones -->
+        <div class="images-container">
+            <a href="https://www.instagram.com/index_group_/">
+                <img src="instagram2.png" alt="Imagen 1" class="small-image">
+            </a>
+            <a href="https://www.tiktok.com/@index_academy">
+                <img src="tiktokBlanco2.png" alt="Imagen 2" class="small-image">
+            </a>
+            <a href="https://chat.whatsapp.com/JiscFAN5xI625QvAuw88rZ">
+                <img src="whatsappblanco.png" alt="Imagen 3" class="small-image">
+            </a>
+        </div>
+        <!-- Espacios con botones -->
+        <div class="buttons-container">
+            <a href="clases.pdf" class="button">
+                <img src="logo.jpg" alt="Logo" class="button-logo">
+                <span class="button-text">Información del curso</span>
+            </a>
+            <a href="https://t.me/indexacademyfree" class="button">
+                <img src="logo.jpg" alt="Logo" class="button-logo">
+                <span class="button-text">Grupo de Telegram</span>
+            </a>
+            <a href="https://discord.gg/t9KuHuwUhp" class="button">
+                <img src="logo.jpg" alt="Logo" class="button-logo">
+                <span class="button-text">Comunidad de Discord</span>
+            </a>
+            <a href="https://chat.whatsapp.com/JiscFAN5xI625QvAuw88rZ" class="button">
+                <img src="logo.jpg" alt="Logo" class="button-logo">
+                <span class="button-text">Grupo de WhatsApp</span>
+            </a>
+            <a href="https://wa.me/59168272761" class="button">
+                <img src="logo.jpg" alt="Logo" class="button-logo">
+                <span class="button-text">Contacto WhatsApp</span>
+            </a>
+        </div>
+
+
+    
+</body>
+</html>
